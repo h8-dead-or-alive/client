@@ -138,6 +138,9 @@ import Parallax from "parallax-js";
 
 export default {
   name: "homepage",
+  data() {
+    return {};
+  },
   methods: {
     goMainContent() {
       console.log("masuk");
