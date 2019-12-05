@@ -75,6 +75,10 @@
   position: relative;
   left: 500px;
 }
+@import url("https://fonts.googleapis.com/css?family=Roboto:500i&display=swap");
+#navbartop[data-v-35ae83] {
+  font-family: "Roboto", sans-serif;
+}
 /*!
  * Bootstrap v4.4.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors

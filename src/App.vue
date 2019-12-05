@@ -1,12 +1,15 @@
 <template>
   <div>
     <Homepage v-if="!main" @go-main="goMain"></Homepage>
-    <Maincontent v-else></Maincontent>
+    <Maincontent
+      v-else
+      @go-homepage="goHomePage"
+      @go-main="main = true"
+    ></Maincontent>
   </div>
 </template>
 
 <script>
-// import Navbar from "./components/Navbar.vue";
 import Homepage from "./components/Homepage.vue";
 import Maincontent from "./views/Maincontent.vue";
 
@@ -24,6 +27,18 @@ export default {
   methods: {
     goMain() {
       this.main = true;
+      localStorage.setItem("gomain", "mainnow");
+    },
+    goHomePage() {
+      this.main = false;
+      localStorage.removeItem("gomain");
+    }
+  },
+  created() {
+    if (localStorage.getItem("gomain")) {
+      this.main = true;
+    } else {
+      this.main = false;
     }
   }
 };
