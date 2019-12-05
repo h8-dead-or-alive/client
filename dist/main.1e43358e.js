@@ -10388,6 +10388,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 var _default = {
   name: "homepage",
+  data: function data() {
+    return {};
+  },
   methods: {
     goMainContent: function goMainContent() {
       console.log("masuk");
@@ -10752,8 +10755,19 @@ exports.default = void 0;
 //
 //
 //
+//
+//
+//
+//
+//
+//
 var _default = {
-  name: "navbar"
+  name: "navbar",
+  methods: {
+    goHomePage: function goHomePage() {
+      this.$emit("go-homepage");
+    }
+  }
 };
 exports.default = _default;
         var $35ae83 = exports.default || module.exports;
@@ -10769,68 +10783,74 @@ exports.default = _default;
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "b-navbar",
-    { attrs: { toggleable: "lg", type: "dark", variant: "dark" } },
+    "div",
+    { attrs: { id: "navbartop" } },
     [
-      _c("b-navbar-brand", { attrs: { href: "#" } }, [
-        _c("img", {
-          attrs: {
-            src: "/logonav.f1ca7baf.png",
-            alt: "logonavbar"
-          }
-        })
-      ]),
-      _vm._v(" "),
-      _c("b-navbar-toggle", { attrs: { target: "nav-collapse" } }),
-      _vm._v(" "),
       _c(
-        "b-collapse",
-        { attrs: { id: "nav-collapse", "is-nav": "" } },
+        "b-navbar",
+        { attrs: { toggleable: "lg", type: "light", variant: "light" } },
         [
-          _c(
-            "b-navbar-nav",
-            [
-              _c("b-nav-item", { attrs: { href: "#" } }, [
-                _vm._v("DeadOrLive")
-              ]),
-              _vm._v(" "),
-              _c(
-                "b-nav-item-dropdown",
-                { attrs: { text: "Menu", right: "" } },
-                [
-                  _c("b-dropdown-item", { attrs: { href: "#" } }, [
-                    _vm._v("Add New Bounty")
-                  ]),
-                  _vm._v(" "),
-                  _c("b-dropdown-item", { attrs: { href: "#" } }, [
-                    _vm._v("List Bounty")
-                  ])
-                ],
-                1
-              )
-            ],
-            1
-          ),
+          _c("b-navbar-brand", { attrs: { href: "#" } }, [
+            _c("img", {
+              attrs: {
+                src: "/logohome.6fe2b119.png",
+                width: "150px",
+                height: "60px",
+                alt: "logonavbar"
+              },
+              on: { click: _vm.goHomePage }
+            })
+          ]),
+          _vm._v(" "),
+          _c("b-navbar-toggle", { attrs: { target: "nav-collapse" } }),
           _vm._v(" "),
           _c(
-            "b-navbar-nav",
-            { staticClass: "ml-auto" },
+            "b-collapse",
+            { attrs: { id: "nav-collapse", "is-nav": "" } },
             [
               _c(
-                "b-nav-form",
+                "b-navbar-nav",
                 [
-                  _c("b-form-input", {
-                    staticClass: "mr-sm-2",
-                    attrs: { size: "sm", placeholder: "Search" }
-                  }),
-                  _vm._v(" "),
                   _c(
-                    "b-button",
-                    {
-                      staticClass: "my-2 my-sm-0",
-                      attrs: { size: "sm", type: "submit" }
-                    },
-                    [_vm._v("Search")]
+                    "b-nav-item-dropdown",
+                    { attrs: { text: "Menu", right: "" } },
+                    [
+                      _c("b-dropdown-item", { attrs: { href: "#" } }, [
+                        _vm._v("Add New Bounty")
+                      ]),
+                      _vm._v(" "),
+                      _c("b-dropdown-item", { attrs: { href: "#" } }, [
+                        _vm._v("List Bounty")
+                      ])
+                    ],
+                    1
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "b-navbar-nav",
+                { staticClass: "ml-auto" },
+                [
+                  _c(
+                    "b-nav-form",
+                    [
+                      _c("b-form-input", {
+                        staticClass: "mr-sm-2",
+                        attrs: { size: "sm", placeholder: "Search" }
+                      }),
+                      _vm._v(" "),
+                      _c(
+                        "b-button",
+                        {
+                          staticClass: "my-2 my-sm-0",
+                          attrs: { size: "sm", type: "submit" }
+                        },
+                        [_vm._v("Search")]
+                      )
+                    ],
+                    1
                   )
                 ],
                 1
@@ -10852,7 +10872,7 @@ render._withStripped = true
             render: render,
             staticRenderFns: staticRenderFns,
             _compiled: true,
-            _scopeId: null,
+            _scopeId: "data-v-35ae83",
             functional: undefined
           };
         })());
@@ -10878,7 +10898,7 @@ render._withStripped = true
       
       }
     })();
-},{"./../assets/img/logonav.png":[["logonav.f1ca7baf.png","src/assets/img/logonav.png"],"src/assets/img/logonav.png"],"_css_loader":"../../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"src/views/Maincontent.vue":[function(require,module,exports) {
+},{"./../assets/img/logohome.png":[["logohome.6fe2b119.png","src/assets/img/logohome.png"],"src/assets/img/logohome.png"],"_css_loader":"../../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"src/views/Maincontent.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -10897,8 +10917,21 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 var _default = {
+  name: "navbar",
   components: {
     Navbar: _Navbar.default
+  },
+  methods: {
+    goHomePage: function goHomePage() {
+      this.$emit("go-homepage");
+    }
+  },
+  created: function created() {
+    if (localStorage.getItem("gomain")) {
+      this.$emit("go-main");
+    } else {
+      this.$emit("go-homepage");
+    }
   }
 };
 exports.default = _default;
@@ -10914,7 +10947,12 @@ exports.default = _default;
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "maincontent" }, [_c("Navbar")], 1)
+  return _c(
+    "div",
+    { staticClass: "maincontent" },
+    [_c("Navbar", { on: { "go-homepage": _vm.goHomePage } })],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -10970,7 +11008,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
-// import Navbar from "./components/Navbar.vue";
+//
+//
+//
+//
 var _default = {
   name: "App",
   data: function data() {
@@ -10985,6 +11026,18 @@ var _default = {
   methods: {
     goMain: function goMain() {
       this.main = true;
+      localStorage.setItem("gomain", "mainnow");
+    },
+    goHomePage: function goHomePage() {
+      this.main = false;
+      localStorage.removeItem("gomain");
+    }
+  },
+  created: function created() {
+    if (localStorage.getItem("gomain")) {
+      this.main = true;
+    } else {
+      this.main = false;
     }
   }
 };
@@ -11006,7 +11059,14 @@ exports.default = _default;
     [
       !_vm.main
         ? _c("Homepage", { on: { "go-main": _vm.goMain } })
-        : _c("Maincontent")
+        : _c("Maincontent", {
+            on: {
+              "go-homepage": _vm.goHomePage,
+              "go-main": function($event) {
+                _vm.main = true
+              }
+            }
+          })
     ],
     1
   )
@@ -46825,7 +46885,6 @@ require("bootstrap-vue/dist/bootstrap-vue.css");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// import Bootstrap from "bootstrap";
 _vue.default.use(_bootstrapVue.default);
 
 new _vue.default({
@@ -46861,7 +46920,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "46629" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "44669" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
