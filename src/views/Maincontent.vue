@@ -6,7 +6,7 @@
       @go-home="goList = false"
     ></Navbar>
     <Content :bounties="bounties" v-if="!goList"></Content>
-    <Listbounty v-if="goList"></Listbounty>
+    <Listbounty :bounties="bounties" v-if="goList"></Listbounty>
   </div>
 </template>
 

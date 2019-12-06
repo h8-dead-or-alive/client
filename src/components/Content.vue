@@ -1,17 +1,22 @@
 <template>
   <div class="content">
     <div id="content-wrapper">
-      <b-card-group id="card-list" deck>
+      <b-card-group
+        id="card-list"
+        v-for="bounty in bounties"
+        :key="bounty.name"
+        deck
+      >
         <div id="card">
           <img
-            src="../assets/img/upload/test1.jpg"
+            :src="bounty.img"
             width="287px"
             height="210px"
             alt="test"
             id="photo"
           />
-          <h1 id="name">Edwin Satya</h1>
-          <h2 id="bounty">500.000.000</h2>
+          <h1 id="name">{{ bounty.name }}</h1>
+          <h2 id="bounty">{{ bounty.bounty }}</h2>
         </div>
       </b-card-group>
       <!-- 
