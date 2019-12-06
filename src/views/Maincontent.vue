@@ -1,15 +1,19 @@
 <template>
   <div class="maincontent">
     <Navbar @go-homepage="goHomePage"></Navbar>
+    <Content></Content>
   </div>
 </template>
 
 <script>
 import Navbar from "../components/Navbar.vue";
+import Content from "../components/Content.vue";
+
 export default {
   name: "navbar",
   components: {
-    Navbar
+    Navbar,
+    Content
   },
   methods: {
     goHomePage() {
@@ -26,4 +30,5 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+</style>
