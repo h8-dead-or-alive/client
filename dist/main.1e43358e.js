@@ -10898,7 +10898,151 @@ render._withStripped = true
       
       }
     })();
-},{"./../assets/img/logohome.png":[["logohome.6fe2b119.png","src/assets/img/logohome.png"],"src/assets/img/logohome.png"],"_css_loader":"../../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"src/views/Maincontent.vue":[function(require,module,exports) {
+},{"./../assets/img/logohome.png":[["logohome.6fe2b119.png","src/assets/img/logohome.png"],"src/assets/img/logohome.png"],"_css_loader":"../../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"src/components/Content.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = {
+  name: "content",
+  methods: {}
+};
+exports.default = _default;
+        var $2d4012 = exports.default || module.exports;
+      
+      if (typeof $2d4012 === 'function') {
+        $2d4012 = $2d4012.options;
+      }
+    
+        /* template */
+        Object.assign($2d4012, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "content" }, [
+    _c(
+      "div",
+      { attrs: { id: "content-wrapper" } },
+      [
+        _c("b-card-group", { attrs: { id: "card-list", deck: "" } }, [
+          _c("div", { attrs: { id: "card" } })
+        ]),
+        _vm._v(" "),
+        _c("b-card-group", { attrs: { id: "card-list", deck: "" } }, [
+          _c("div", { attrs: { id: "card" } })
+        ]),
+        _vm._v(" "),
+        _c("b-card-group", { attrs: { id: "card-list", deck: "" } }, [
+          _c("div", { attrs: { id: "card" } })
+        ]),
+        _vm._v(" "),
+        _c("b-card-group", { attrs: { id: "card-list", deck: "" } }, [
+          _c("div", { attrs: { id: "card" } })
+        ]),
+        _vm._v(" "),
+        _c("b-card-group", { attrs: { id: "card-list", deck: "" } }, [
+          _c("div", { attrs: { id: "card" } })
+        ]),
+        _vm._v(" "),
+        _c("b-card-group", { attrs: { id: "card-list", deck: "" } }, [
+          _c("div", { attrs: { id: "card" } })
+        ]),
+        _vm._v(" "),
+        _c("b-card-group", { attrs: { id: "card-list", deck: "" } }, [
+          _c("div", { attrs: { id: "card" } })
+        ]),
+        _vm._v(" "),
+        _c("b-card-group", { attrs: { id: "card-list", deck: "" } }, [
+          _c("div", { attrs: { id: "card" } })
+        ]),
+        _vm._v(" "),
+        _c("b-card-group", { attrs: { id: "card-list", deck: "" } }, [
+          _c("div", { attrs: { id: "card" } })
+        ])
+      ],
+      1
+    )
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: "data-v-2d4012",
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$2d4012', $2d4012);
+          } else {
+            api.reload('$2d4012', $2d4012);
+          }
+        }
+
+        
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+      }
+    })();
+},{"./../assets/img/poster.png":[["poster.60b78fa7.png","src/assets/img/poster.png"],"src/assets/img/poster.png"],"_css_loader":"../../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"src/views/Maincontent.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -10908,8 +11052,11 @@ exports.default = void 0;
 
 var _Navbar = _interopRequireDefault(require("../components/Navbar.vue"));
 
+var _Content = _interopRequireDefault(require("../components/Content.vue"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+//
 //
 //
 //
@@ -10919,7 +11066,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var _default = {
   name: "navbar",
   components: {
-    Navbar: _Navbar.default
+    Navbar: _Navbar.default,
+    Content: _Content.default
   },
   methods: {
     goHomePage: function goHomePage() {
@@ -10950,7 +11098,11 @@ exports.default = _default;
   return _c(
     "div",
     { staticClass: "maincontent" },
-    [_c("Navbar", { on: { "go-homepage": _vm.goHomePage } })],
+    [
+      _c("Navbar", { on: { "go-homepage": _vm.goHomePage } }),
+      _vm._v(" "),
+      _c("Content")
+    ],
     1
   )
 }
@@ -10961,7 +11113,7 @@ render._withStripped = true
             render: render,
             staticRenderFns: staticRenderFns,
             _compiled: true,
-            _scopeId: null,
+            _scopeId: "data-v-2fcc3d",
             functional: undefined
           };
         })());
@@ -10987,7 +11139,7 @@ render._withStripped = true
       
       }
     })();
-},{"../components/Navbar.vue":"src/components/Navbar.vue","_css_loader":"../../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"src/App.vue":[function(require,module,exports) {
+},{"../components/Navbar.vue":"src/components/Navbar.vue","../components/Content.vue":"src/components/Content.vue","_css_loader":"../../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"src/App.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -11001,10 +11153,6 @@ var _Maincontent = _interopRequireDefault(require("./views/Maincontent.vue"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-//
-//
-//
-//
 //
 //
 //
@@ -11078,7 +11226,7 @@ render._withStripped = true
             render: render,
             staticRenderFns: staticRenderFns,
             _compiled: true,
-            _scopeId: null,
+            _scopeId: "data-v-079076",
             functional: undefined
           };
         })());
@@ -46920,7 +47068,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "44669" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "35585" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

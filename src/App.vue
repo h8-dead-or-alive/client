@@ -1,11 +1,7 @@
 <template>
   <div>
     <Homepage v-if="!main" @go-main="goMain"></Homepage>
-    <Maincontent
-      v-else
-      @go-homepage="goHomePage"
-      @go-main="main = true"
-    ></Maincontent>
+    <Maincontent v-else @go-homepage="goHomePage" @go-main="main = true"></Maincontent>
   </div>
 </template>
 
@@ -44,4 +40,5 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+</style>

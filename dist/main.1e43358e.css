@@ -79,6 +79,38 @@
 #navbartop[data-v-35ae83] {
   font-family: "Roboto", sans-serif;
 }
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display&display=swap");
+.content[data-v-2d4012] {
+  font-family: "Playfair Display", serif;
+}
+#content-wrapper[data-v-2d4012] {
+  padding: 25px 40px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  color: red;
+  width: 100%;
+  justify-content: space-between;
+}
+#card-list[data-v-2d4012] {
+  transition: all 0.5s ease-in-out;
+}
+#card-list[data-v-2d4012]:hover {
+  transition: 0.5s;
+  transform: scale(1.2);
+}
+#card[data-v-2d4012] {
+  margin-bottom: 25px;
+  width: 400px;
+  height: 500px;
+  background-image: url("/poster.60b78fa7.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  background-size: contain;
+}
+#card-content[data-v-2d4012] {
+}
 /*!
  * Bootstrap v4.4.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
