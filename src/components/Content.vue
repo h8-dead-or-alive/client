@@ -16,7 +16,7 @@
             id="photo"
           />
           <h1 id="name">{{ bounty.name }}</h1>
-          <h2 id="bounty">{{ bounty.bounty }}</h2>
+          <h2 id="bounty">{{ formatBounty(bounty.bounty) }}</h2>
           <button id="btn-bounties" @click="addBountyAmount(bounty)"></button>
 
           <a
@@ -45,7 +45,16 @@ export default {
   },
   methods: {
     addBountyAmount(bounty) {
-      db.collection("bounties").doc(bounty.id);
+      let addedAmount =
+        bounty.bounty + Math.floor(Math.random() * 1000000 + 50000);
+      db.collection("bounties")
+        .doc(bounty.id)
+        .update({ bounty: addedAmount });
+    },
+    formatBounty(amount) {
+      amount = String(amount);
+      amount = amount.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      return amount;
     }
   }
 };

@@ -23,7 +23,9 @@
           </div>
         </template>
         <template v-slot:cell(bounty)="data">
-          <div style="margin-top: 0.5rem;">{{ data.item.bounty }}</div>
+          <div style="margin-top: 0.5rem;">
+            {{ formatBounty(data.item.bounty) }}
+          </div>
         </template>
       </b-table>
     </div>
@@ -39,7 +41,7 @@ export default {
       fields: [
         {
           key: "img",
-          label: "P"
+          label: "Portrait"
         },
         {
           key: "name",
@@ -52,16 +54,7 @@ export default {
           class: "text-center",
           sortDirection: "desc"
         }
-      ],
-      totalRows: 1,
-      currentPage: 1,
-      perPage: 5,
-      pageOptions: [5, 10, 15],
-      sortBy: "bounty",
-      sortDesc: false,
-      sortDirection: "asc",
-      filter: null,
-      filterOn: []
+      ]
     };
   },
   computed: {
@@ -74,24 +67,19 @@ export default {
         });
     }
   },
-  mounted() {
-    // Set the initial number of items
-    this.totalRows = this.bounties.length;
-  },
   methods: {
-    info(item, index, button) {
-      this.infoModal.title = `Row index: ${index}`;
-      this.infoModal.content = JSON.stringify(item, null, 2);
-      this.$root.$emit("bv::show::modal", this.infoModal.id, button);
-    },
-    resetInfoModal() {
-      this.infoModal.title = "";
-      this.infoModal.content = "";
-    },
-    onFiltered(filteredItems) {
-      // Trigger pagination to update the number of buttons/pages due to filtering
-      this.totalRows = filteredItems.length;
-      this.currentPage = 1;
+    formatBounty(amount) {
+      amount = String(amount);
+      return amount
+        .split("")
+        .reverse()
+        .map((val, index) => {
+          let r = (amount.length - index) % 3 === 0 ? "," : "";
+          r += val;
+          return r;
+        })
+        .reverse()
+        .join("");
     }
   }
 };

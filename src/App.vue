@@ -52,7 +52,7 @@ export default {
         };
       });
       // console.log(data);
-      data.sort((a, b) => a.bounty - b.bounty);
+      data.sort((a, b) => b.bounty - a.bounty);
       this.bounties = data;
     });
   }
