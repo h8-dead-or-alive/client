@@ -17,50 +17,27 @@
           />
           <h1 id="name">{{ bounty.name }}</h1>
           <h2 id="bounty">{{ bounty.bounty }}</h2>
-          <button id="btn-bounties"></button>
+          <button id="btn-bounties" @click="addBountyAmount(bounty)"></button>
         </div>
       </b-card-group>
-      <!-- 
-      <b-card-group id="card-list" deck>
-        <div id="card"></div>
-      </b-card-group>
-
-      <b-card-group id="card-list" deck>
-        <div id="card"></div>
-      </b-card-group>
-
-      <b-card-group id="card-list" deck>
-        <div id="card"></div>
-      </b-card-group>
-
-      <b-card-group id="card-list" deck>
-        <div id="card"></div>
-      </b-card-group>
-
-      <b-card-group id="card-list" deck>
-        <div id="card"></div>
-      </b-card-group>
-
-      <b-card-group id="card-list" deck>
-        <div id="card"></div>
-      </b-card-group>
-
-      <b-card-group id="card-list" deck>
-        <div id="card"></div>
-      </b-card-group>
-
-      <b-card-group id="card-list" deck>
-        <div id="card"></div>
-      </b-card-group> -->
     </div>
   </div>
 </template>
 
 <script>
+import db from "../../config/firebase";
+
 export default {
   name: "content",
   props: ["bounties"],
-  methods: {}
+  data() {
+    return {};
+  },
+  methods: {
+    addBountyAmount(bounty) {
+      db.collection("bounties").doc(bounty.id);
+    }
+  }
 };
 </script>
 
@@ -93,13 +70,13 @@ export default {
 #bounty {
   position: absolute;
   z-index: 3;
-  top: 528px;
+  bottom: 35px;
   text-transform: uppercase;
 }
 
-#card-list:hover #bounty {
-  top: 416px;
-}
+/* #card-list:hover #bounty {
+  top: 200px;
+} */
 
 #name {
   position: absolute;
@@ -107,13 +84,12 @@ export default {
   text-transform: uppercase;
 }
 
-#card-list:hover #name {
-  top: 365px;
-  /* transition: 0.5s; */
-}
+/* #card-list:hover #name {
+  bottom: 80px;
+} */
 
 #card-list #name {
-  top: 475px;
+  bottom: 80px;
 }
 
 #content-wrapper {
@@ -146,6 +122,7 @@ export default {
   background-size: contain;
   display: flex;
   justify-content: center;
+  position: relative;
 }
 
 #card-content {
