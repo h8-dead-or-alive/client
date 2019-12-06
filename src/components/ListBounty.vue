@@ -2,24 +2,6 @@
   <div class="listbounty">
     <h2>List Bounties :</h2>
     <div class="detailbounty">
-      <!-- <b-table
-        show-empty
-        small
-        stacked="md"
-        :items="bounties"
-        :fields="fields"
-        :filter="filter"
-        :filterIncludedFields="filterOn"
-        :sort-by.sync="sortBy"
-        :sort-desc.sync="sortDesc"
-        :sort-direction="sortDirection"
-        @filtered="onFiltered"
-      >
-        <img src="" alt="photo" style="position:absolute;" />
-        <template v-slot:cell(name)="row">
-          {{ row.value.first }} {{ row.value.last }}
-        </template>
-      </b-table> -->
       <b-table
         striped
         hover
