@@ -45,7 +45,12 @@ export default {
     }
     db.collection("bounties").onSnapshot(querySnapshot => {
       var cities = [];
-      const data = querySnapshot.docs.map(doc => doc.data());
+      const data = querySnapshot.docs.map(doc => {
+        return {
+          id: doc.id,
+          ...doc.data()
+        };
+      });
       // console.log(data);
       data.sort((a, b) => a.bounty - b.bounty);
       this.bounties = data;
