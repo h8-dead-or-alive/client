@@ -17,6 +17,7 @@
           />
           <h1 id="name">{{ bounty.name }}</h1>
           <h2 id="bounty">{{ bounty.bounty }}</h2>
+          <button id="btn-bounties"></button>
         </div>
       </b-card-group>
       <!-- 
@@ -67,6 +68,21 @@ export default {
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display&display=swap");
 .content {
   font-family: "Playfair Display", serif;
+}
+
+#btn-bounties {
+  width: 35px;
+  height: 35px;
+  left: 80px;
+  position: absolute;
+  z-index: 4;
+  top: 530px;
+  opacity: 0;
+}
+
+#card-list:hover #btn-bounties {
+  top: 420px;
+  left: 55px;
 }
 
 #photo {
