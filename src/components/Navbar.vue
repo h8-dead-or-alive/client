@@ -9,6 +9,7 @@
           alt="logonavbar"
           @click="goHomePage"
       /></b-navbar-brand>
+      <b-navbar-brand href="#" @click="goHome">Home</b-navbar-brand>
 
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
@@ -16,7 +17,9 @@
         <b-navbar-nav>
           <b-nav-item-dropdown text="Menu" right>
             <b-dropdown-item href="#">Add New Bounty</b-dropdown-item>
-            <b-dropdown-item href="#">List Bounty</b-dropdown-item>
+            <b-dropdown-item @click="goList" href="#"
+              >List Bounty</b-dropdown-item
+            >
           </b-nav-item-dropdown>
         </b-navbar-nav>
 
@@ -47,10 +50,11 @@ export default {
     goHomePage() {
       this.$emit("go-homepage");
     },
-    coba() {
-      db.collection("users")
-        .doc("alovelace")
-        .set({ name: "Lovelace" });
+    goList() {
+      this.$emit("go-list");
+    },
+    goHome() {
+      this.$emit("go-home");
     }
   }
 };

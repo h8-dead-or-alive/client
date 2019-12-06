@@ -1,19 +1,31 @@
 <template>
   <div class="maincontent">
-    <Navbar @go-homepage="goHomePage"></Navbar>
-    <Content></Content>
+    <Navbar
+      @go-homepage="goHomePage"
+      @go-list="goList = true"
+      @go-home="goList = false"
+    ></Navbar>
+    <Content v-if="!goList"></Content>
+    <Listbounty v-if="goList"></Listbounty>
   </div>
 </template>
 
 <script>
 import Navbar from "../components/Navbar.vue";
 import Content from "../components/Content.vue";
+import Listbounty from "../components/ListBounty.vue";
 
 export default {
   name: "navbar",
   components: {
     Navbar,
-    Content
+    Content,
+    Listbounty
+  },
+  data() {
+    return {
+      goList: false
+    };
   },
   methods: {
     goHomePage() {
@@ -30,5 +42,4 @@ export default {
 };
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>
