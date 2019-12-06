@@ -5,7 +5,7 @@
       @go-list="goList = true"
       @go-home="goList = false"
     ></Navbar>
-    <Content v-if="!goList"></Content>
+    <Content :bounties="bounties" v-if="!goList"></Content>
     <Listbounty v-if="goList"></Listbounty>
   </div>
 </template>
@@ -27,6 +27,7 @@ export default {
       goList: false
     };
   },
+  props: ["bounties"],
   methods: {
     goHomePage() {
       this.$emit("go-homepage");

@@ -14,7 +14,7 @@
           <h2 id="bounty">500.000.000</h2>
         </div>
       </b-card-group>
-
+      <!-- 
       <b-card-group id="card-list" deck>
         <div id="card"></div>
       </b-card-group>
@@ -45,7 +45,7 @@
 
       <b-card-group id="card-list" deck>
         <div id="card"></div>
-      </b-card-group>
+      </b-card-group> -->
     </div>
   </div>
 </template>
@@ -53,6 +53,7 @@
 <script>
 export default {
   name: "content",
+  props: ["bounties"],
   methods: {}
 };
 </script>
