@@ -11,69 +11,152 @@
   position: relative;
   left: 550px;
   top: 250px;
+  transition: 0.5s;
 }
 #luffy[data-v-675f07]:hover {
   cursor: pointer;
+  transform: scale(1.1);
+  transition: 0.5s;
 }
 #zoro[data-v-675f07] {
+  left: 0px;
+  top: 0px;
   position: relative;
+  transition: 0.5s;
+}
+#zoro[data-v-675f07]:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: 0.5s;
 }
 #usop[data-v-675f07] {
   position: relative;
   left: 1150px;
+  transition: 0.5s;
+}
+#usop[data-v-675f07]:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: 0.5s;
 }
 #sanji[data-v-675f07] {
   position: relative;
   top: 450px;
   left: 20px;
+  transition: 0.5s;
+}
+#sanji[data-v-675f07]:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: 0.5s;
 }
 #nami[data-v-675f07] {
   position: relative;
   left: 1150px;
   top: 450px;
+  transition: 0.5s;
+}
+#nami[data-v-675f07]:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: 0.5s;
 }
 #chopper[data-v-675f07] {
   position: relative;
   left: 275px;
   top: 113px;
+  transition: 0.5s;
+}
+#chopper[data-v-675f07]:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: 0.5s;
 }
 #robbin[data-v-675f07] {
   position: relative;
   left: 800px;
+  transition: 0.5s;
+}
+#robbin[data-v-675f07]:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: 0.5s;
 }
 #franky[data-v-675f07] {
   position: relative;
   left: 800px;
   top: 300px;
+  transition: 0.5s;
+}
+#franky[data-v-675f07]:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: 0.5s;
 }
 #brook[data-v-675f07] {
   position: relative;
   left: 300px;
   top: 250px;
+  transition: 0.5s;
+}
+#brook[data-v-675f07]:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: 0.5s;
 }
 #kuma[data-v-675f07] {
   position: relative;
   left: 430px;
   top: 430px;
+  transition: 0.5s;
+}
+#kuma[data-v-675f07]:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: 0.5s;
 }
 #kid[data-v-675f07] {
   position: relative;
   left: 700px;
   top: 500px;
+  transition: 0.5s;
+}
+#kid[data-v-675f07]:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: 0.5s;
 }
 #ace[data-v-675f07] {
   position: relative;
   left: 920px;
   top: 250px;
+  transition: 0.5s;
+}
+#ace[data-v-675f07]:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: 0.5s;
 }
 #bellamy[data-v-675f07] {
   position: relative;
   top: 300px;
   left: 100px;
+  transition: 0.5s;
+}
+#bellamy[data-v-675f07]:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: 0.5s;
 }
 #law[data-v-675f07] {
   position: relative;
   left: 500px;
+  transition: 0.5s;
+}
+#law[data-v-675f07]:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: 0.5s;
 }
 @import url("https://fonts.googleapis.com/css?family=Roboto:500i&display=swap");
 #navbartop[data-v-35ae83] {

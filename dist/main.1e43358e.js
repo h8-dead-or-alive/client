@@ -10368,24 +10368,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 var _default = {
   name: "homepage",
   data: function data() {
@@ -10473,21 +10455,17 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      { staticClass: "layer", attrs: { id: "zoro", "data-depth": "1" } },
-      [
-        _c("img", {
-          attrs: {
-            src: "/zoro.68ab2509.jpg",
-            width: "150px",
-            height: "200px",
-            alt: "zoro",
-            id: "zoro"
-          }
-        })
-      ]
-    )
+    return _c("div", { staticClass: "layer", attrs: { "data-depth": "0.5" } }, [
+      _c("img", {
+        attrs: {
+          src: "/zoro.68ab2509.jpg",
+          width: "150px",
+          height: "200px",
+          alt: "zoro",
+          id: "zoro"
+        }
+      })
+    ])
   },
   function() {
     var _vm = this
@@ -47068,7 +47046,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "35585" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "38415" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
