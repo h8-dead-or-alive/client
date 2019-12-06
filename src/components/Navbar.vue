@@ -31,6 +31,7 @@
             <b-button size="sm" class="my-2 my-sm-0" type="submit"
               >Search</b-button
             >
+            <b-button size="sm" @click="coba">Coba</b-button>
           </b-nav-form>
         </b-navbar-nav>
       </b-collapse>
@@ -39,11 +40,17 @@
 </template>
 
 <script>
+import db from "../../config/firebase";
 export default {
   name: "navbar",
   methods: {
     goHomePage() {
       this.$emit("go-homepage");
+    },
+    coba() {
+      db.collection("users")
+        .doc("alovelace")
+        .set({ name: "Lovelace" });
     }
   }
 };
