@@ -2,11 +2,11 @@
   <div class="listbounty">
     <h2>List Bounties :</h2>
     <div class="detailbounty">
-      <b-table
+      <!-- <b-table
         show-empty
         small
         stacked="md"
-        :items="items"
+        :items="bounties"
         :fields="fields"
         :filter="filter"
         :filterIncludedFields="filterOn"
@@ -19,6 +19,30 @@
         <template v-slot:cell(name)="row">
           {{ row.value.first }} {{ row.value.last }}
         </template>
+      </b-table> -->
+      <b-table
+        striped
+        hover
+        small
+        stacked="md"
+        :items="bounties"
+        :fields="fields"
+        tbody-tr-class=""
+        details-td-class="py-5"
+      >
+        <template v-slot:cell(img)="data">
+          <figure class="overflow-hidden my-auto" style="height: 35px;">
+            <img :src="data.item.img" style="max-height:100%;" alt="" />
+          </figure>
+        </template>
+        <template v-slot:cell(name)="data">
+          <div style="margin-top: 0.5rem;">
+            {{ data.item.name }}
+          </div>
+        </template>
+        <template v-slot:cell(bounty)="data">
+          <div style="margin-top: 0.5rem;">{{ data.item.bounty }}</div>
+        </template>
       </b-table>
     </div>
   </div>
@@ -27,78 +51,35 @@
 <script>
 export default {
   name: "listbounty",
+  props: ["bounties"],
   data() {
     return {
-      items: [
-        {
-          isActive: true,
-          age: 40,
-          name: { first: "Dickerson", last: "Macdonald" }
-        },
-        { isActive: false, age: 21, name: { first: "Larsen", last: "Shaw" } },
-        {
-          isActive: false,
-          age: 9,
-          name: { first: "Mini", last: "Navarro" },
-          _rowVariant: "success"
-        },
-        { isActive: false, age: 89, name: { first: "Geneva", last: "Wilson" } },
-        { isActive: true, age: 38, name: { first: "Jami", last: "Carney" } },
-        { isActive: false, age: 27, name: { first: "Essie", last: "Dunlap" } },
-        { isActive: true, age: 40, name: { first: "Thor", last: "Macdonald" } },
-        {
-          isActive: true,
-          age: 87,
-          name: { first: "Larsen", last: "Shaw" },
-          _cellVariants: { age: "danger", isActive: "warning" }
-        },
-        { isActive: false, age: 26, name: { first: "Mitzi", last: "Navarro" } },
-        {
-          isActive: false,
-          age: 22,
-          name: { first: "Genevieve", last: "Wilson" }
-        },
-        { isActive: true, age: 38, name: { first: "John", last: "Carney" } },
-        { isActive: false, age: 29, name: { first: "Dick", last: "Dunlap" } }
-      ],
       fields: [
         {
+          key: "img",
+          label: "P"
+        },
+        {
           key: "name",
-          label: "Person Full name",
+          label: "Most Wanted"
+        },
+        {
+          key: "bounty",
+          label: "Current Bounty",
           sortable: true,
+          class: "text-center",
           sortDirection: "desc"
-        },
-        {
-          key: "age",
-          label: "Person age",
-          sortable: true,
-          class: "text-center"
-        },
-        {
-          key: "isActive",
-          label: "is Active",
-          formatter: (value, key, item) => {
-            return value ? "Yes" : "No";
-          },
-          sortable: true,
-          sortByFormatted: true,
-          filterByFormatted: true
         }
       ],
       totalRows: 1,
       currentPage: 1,
       perPage: 5,
       pageOptions: [5, 10, 15],
-      sortBy: "",
+      sortBy: "bounty",
       sortDesc: false,
       sortDirection: "asc",
       filter: null,
-      filterOn: [],
-      infoModal: {
-        id: "info-modal",
-        title: "",
-        content: ""
-      }
+      filterOn: []
     };
   },
   computed: {
@@ -113,7 +94,7 @@ export default {
   },
   mounted() {
     // Set the initial number of items
-    this.totalRows = this.items.length;
+    this.totalRows = this.bounties.length;
   },
   methods: {
     info(item, index, button) {
@@ -143,4 +124,11 @@ export default {
   height: 87vh;
   background-color: #d4c4b3;
 }
+table.b-table[aria-busy="true"] {
+  opacity: 0.6;
+}
+/* 
+table.b-table tr {
+  text-align: center;
+} */
 </style>
