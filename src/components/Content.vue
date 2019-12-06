@@ -18,6 +18,16 @@
           <h1 id="name">{{ bounty.name }}</h1>
           <h2 id="bounty">{{ bounty.bounty }}</h2>
           <button id="btn-bounties" @click="addBountyAmount(bounty)"></button>
+
+          <a
+            id="share-buttons"
+            :href="`https://twitter.com/intent/tweet?url=${bounty.img}`"
+          >
+            <img
+              src="https://simplesharebuttons.com/images/somacro/twitter.png"
+              alt="Twitter"
+            />
+          </a>
         </div>
       </b-card-group>
     </div>
@@ -47,6 +57,22 @@ export default {
   font-family: "Playfair Display", serif;
 }
 
+#share-buttons img {
+  width: 35px;
+  padding: 5px;
+  border: 0;
+  box-shadow: 0;
+  display: inline;
+  z-index: 5;
+  margin-top: 1px;
+  right: 1px;
+}
+
+.twitter-share-button {
+  position: absolute;
+  right: 2px;
+}
+
 #btn-bounties {
   width: 35px;
   height: 35px;
@@ -74,19 +100,11 @@ export default {
   text-transform: uppercase;
 }
 
-/* #card-list:hover #bounty {
-  top: 200px;
-} */
-
 #name {
   position: absolute;
   z-index: 2;
   text-transform: uppercase;
 }
-
-/* #card-list:hover #name {
-  bottom: 80px;
-} */
 
 #card-list #name {
   bottom: 80px;
@@ -100,10 +118,6 @@ export default {
   width: 100%;
   justify-content: space-between;
   color: #544125;
-}
-
-#card-list {
-  /* transition: all 0.5s ease-in-out; */
 }
 
 #card-list:hover {
@@ -123,8 +137,5 @@ export default {
   display: flex;
   justify-content: center;
   position: relative;
-}
-
-#card-content {
 }
 </style>
